@@ -22,9 +22,11 @@ pillars, and guardrails are all specific to Om's context.
 
 | File | What It Does |
 |---|---|
-| `files/LinkedIn_SKILL.md` | Core writing skill. Om's voice profile (built from his own posts), the three content pillars, confidentiality guardrails, technical accuracy guardrails, post format, and the pre-publish checklist. |
+| `files/LinkedIn_SKILL.md` | Core writing skill. Om's voice profile (built from his own posts), a Voice Arc for how confidence should grow over the journey, Technical/Personal/Informative post modes, the three content pillars, confidentiality guardrails, technical accuracy guardrails, post format, and the pre-publish checklist. |
 | `files/anti-ai-writing-guide.md` | Voice-agnostic guide for not sounding like AI — banned vocabulary, structure rules, tone rules, formatting tells, and an editing checklist. |
-| `files/linkedin-weekly-system.md` | The weekly pipeline: Research → Angle → Draft → Guardrail Check → Final. Describes what Om reviews at each stage. |
+| `files/linkedin-weekly-system.md` | The weekly pipeline: Research → Angle → Draft → Guardrail Check → Final, plus the Calibration → Automated phase model. Describes what Om reviews at each stage. |
+| `files/voice-calibration-log.md` | Every post drafted together during calibration, with Om's real feedback and what it changed in the skill file. Determines when the pipeline graduates from Calibration to Automated. |
+| `files/external-reference-posts.md` | Other people's posts Om likes, with the specific technique extracted and checked against his own voice before anything is adopted. |
 
 ## Content Pillars
 
@@ -53,11 +55,19 @@ The five-stage pipeline (Research, Angle, Draft, Guardrail Check, Final) is desc
 `files/linkedin-weekly-system.md`. Om reviews and approves output at every stage — full pipeline
 visibility, no stage is skipped.
 
-## Adapting Further
+## Calibration Phase
 
-The voice profile in `files/LinkedIn_SKILL.md` was built from three of Om's real posts. It will
-get sharper with use — after each batch of new posts, feed back what felt right and what felt
-off, and update the banned-phrase list and the "What GOOD Looks Like" examples accordingly.
+The voice profile in `files/LinkedIn_SKILL.md` was built from three of Om's real posts — not
+enough to call the voice settled. The system is currently in **Calibration phase**: posts get
+drafted together, every draft and every piece of feedback is logged in
+`files/voice-calibration-log.md`, and durable patterns get folded directly into
+`LinkedIn_SKILL.md` in the same pass. External posts Om likes go through
+`files/external-reference-posts.md` first — the specific technique gets pinned down and checked
+against Om's actual voice before it's allowed near the skill file.
+
+Once drafts are consistently landing close to right on the first pass across all three post
+modes, the pipeline graduates to **Automated phase** — see `files/linkedin-weekly-system.md` →
+"Graduating to Automated Phase" for the exact criteria.
 
 ## Origin
 

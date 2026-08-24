@@ -18,6 +18,11 @@ Think of it this way: write like the reflective note someone sends a friend afte
 actually changed how they think about something, not a LinkedIn "thought leadership" post.
 Genuine musing is fine. Uncertainty is fine. Not knowing where something goes yet is fine.
 
+**Calibration status: in progress.** This profile is built from three early posts, not a
+settled voice. Check `voice-calibration-log.md` for the current phase before treating anything
+here as final — see `linkedin-weekly-system.md` → "Two Phases" for what that changes about how
+this skill gets used.
+
 ---
 
 ## Narrative Positioning (read this before writing anything)
@@ -574,17 +579,22 @@ sounds like in the abstract.
 
 ## Keeping This Current
 
-This voice profile was built from three real posts, all early-stage and Personal-mode. It will
-sharpen with use, and it needs to grow in two directions over time, not just get more detailed:
+This voice profile was built from three real posts, all early-stage and Personal-mode. It's
+expected to change often right now — see `voice-calibration-log.md` for the actual mechanism.
+The short version: every post drafted gets logged there with Om's real feedback, and any durable
+pattern from that feedback gets edited directly into this file in the same pass. This section is
+just the map of where things go:
 
-- **New calibration examples.** If a post performed well and captured his voice cleanly, add it
-  to "What GOOD Looks Like" — especially once Technical-mode or Informative-mode posts exist, or
-  once a post lands the later-Voice-Arc, more-confident register. Right now those are
-  described from the brief, not demonstrated from real writing.
-- **Voice Arc tracking.** Periodically check, per pillar and per mode: has Om's real experience
-  grown enough on this specific topic that hedging/novice-framing should start fading in future
-  drafts? Note it here when it does, so the shift is deliberate rather than accidental.
-- **Corrections.** If a sentence felt wrong or a word Om would never say slipped in, add it to
-  the banned list above.
-- **Guardrail near-misses.** If the confidentiality guardrail catches something close to a real
-  leak, note the pattern here so future drafts avoid it earlier, before a full draft is written.
+- **New calibration examples** → "What GOOD Looks Like" above. Especially needed: Technical-mode
+  or Informative-mode posts, and posts that land the later-Voice-Arc, more-confident register —
+  right now those are described from the brief, not demonstrated from real writing.
+- **Voice Arc tracking** → the Voice Arc section above. Check, per pillar and per mode: has Om's
+  real experience grown enough on this specific topic that hedging/novice-framing should start
+  fading? `voice-calibration-log.md` is the evidence for this, since it records what Om's
+  actually built reps on.
+- **Corrections** → the relevant banned/allowed list above (Voice Profile, AI Detection Layer).
+- **Guardrail near-misses** → Confidentiality Guardrails or Technical Accuracy Guardrails above,
+  noting the pattern so future drafts catch it before a full draft is written.
+- **External techniques Om likes** → check `external-reference-posts.md` first. Only a principle
+  that's been checked against Om's actual voice belongs here — never a technique adopted just
+  because it worked for someone else.

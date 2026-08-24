@@ -12,6 +12,29 @@ starts.
 
 ---
 
+## Two Phases: Calibration, Then Automated
+
+**Right now the pipeline is in Calibration phase.** Three posts aren't enough to have actually
+nailed Om's voice — see `voice-calibration-log.md` for status. In this phase:
+
+- Every post gets drafted together, not handed off. Expect more than one draft round per post.
+- Every post, approved or not, gets logged in `voice-calibration-log.md` — the draft, Om's real
+  feedback, and what it changed (or confirmed) in `LinkedIn_SKILL.md`.
+- Any external post Om points to as "I like this" gets logged in `external-reference-posts.md`,
+  with the specific technique pinned down and checked against Om's actual voice before it goes
+  anywhere near `LinkedIn_SKILL.md`. Liking a post doesn't mean copying its voice — see that
+  file's intro.
+- `LinkedIn_SKILL.md` is expected to change frequently during this phase. That's the point of
+  calibration, not a sign something's broken.
+
+**Automated phase** starts once Om says the voice is nailed — see "Graduating to Automated
+Phase" below. After that, the pipeline is trusted to draft closer to final on the first pass, and
+stage-by-stage review can compress (e.g. reviewing Draft + Guardrail Check together) rather than
+five hard stops every time. The five stages themselves don't change — what changes is how much
+back-and-forth each one needs.
+
+---
+
 ## The Five Stages
 
 ### 1. Research
@@ -47,6 +70,11 @@ first-pass confidentiality read, before any full draft is written.
 
 Write the full post using `LinkedIn_SKILL.md` — voice, structure, format, post type. This is
 where the actual writing skill does its work.
+
+**During Calibration phase:** treat the first draft as a starting point, not a delivery. If Om's
+feedback changes it, log the round in `voice-calibration-log.md` before moving to Guardrail
+Check — don't wait until the post is fully approved to log it, since a rejected draft with clear
+feedback is exactly the data the calibration phase needs.
 
 **Output Om reviews:** the full draft, plus the skill's standard output note (character count,
 pillar, post type).
@@ -123,20 +151,46 @@ one pillar.
 | Rejects or edits a stage's output | Pipeline reworks that stage before moving on — never skips ahead on an unapproved stage |
 | "Is this safe to post?" | Runs the Guardrail Check stage standalone against provided text |
 | "What's my content mix looked like this month?" | Reviews recent posts against the pillar mix above |
+| "I like this post" / Om shares an external post with notes | Logs it in `external-reference-posts.md` — pin down the specific technique, check it against Om's voice, before touching `LinkedIn_SKILL.md` |
+| "That's not me" / "keep that, that's exactly right" on a draft | Logs the feedback in `voice-calibration-log.md` for the current post, and updates `LinkedIn_SKILL.md` if it's a durable rule, not a one-off |
+| "Are we ready to automate?" | Checks the Graduating to Automated Phase criteria below against `voice-calibration-log.md` |
 
 ---
 
 ## Tracking
 
-Keep a simple running log (a file, sheet, or whatever the pipeline implementation uses) with, per
-post: date, pillar, mode (Technical/Personal/Informative), template used, one-line topic, and
-guardrail result. This isn't a Notion-specific system — the pipeline architecture is Om's to
-implement; this file just describes what each stage needs to produce and check.
+Two logs, both in `files/`:
 
-This log is also what makes the Voice Arc (`LinkedIn_SKILL.md`) usable over time — it's the
-record of which topics Om has actually built real reps on, which is what future Angle stages
-should check before deciding whether a claim has earned confident framing or still belongs in
+- **`voice-calibration-log.md`** — every post drafted together: the input, the draft(s), Om's
+  real feedback, the final approved text, and what changed in `LinkedIn_SKILL.md` as a result.
+  This is the primary calibration record.
+- **`external-reference-posts.md`** — external posts Om likes, with the specific technique
+  extracted and checked against his voice before anything gets folded into `LinkedIn_SKILL.md`.
+
+Together these are what makes the Voice Arc (`LinkedIn_SKILL.md`) usable over time — the record
+of which topics Om has actually built real reps on, which is what future Angle stages should
+check before deciding whether a claim has earned confident framing or still belongs in
 learning-posture framing.
+
+---
+
+## Graduating to Automated Phase
+
+Move from Calibration to Automated when, looking at `voice-calibration-log.md`:
+
+- Recent drafts are landing close to right on the first pass — Om's feedback has shifted from
+  "this doesn't sound like me" to minor line edits.
+- The banned/allowed phrase lists and "What GOOD Looks Like" examples in `LinkedIn_SKILL.md`
+  haven't needed a real update in the last several posts.
+- All three post modes (Technical/Personal/Informative) have at least one logged, approved
+  example — not just Personal, which is what the original three calibration posts happened to
+  be.
+- Om says so. This is ultimately his call, not a checklist the pipeline can tick off on its own.
+
+When that happens, update the Status block at the top of `voice-calibration-log.md` to
+`Phase: Automated` and note the date. The log doesn't stop — new posts still get added, and a
+post that clearly misses the voice still gets logged and folded back into `LinkedIn_SKILL.md` —
+but stage-by-stage review can compress per "Two Phases" above.
 
 ---
 
@@ -144,6 +198,8 @@ learning-posture framing.
 
 | File | Purpose |
 |---|---|
-| `LinkedIn_SKILL.md` | Voice profile, content pillars, confidentiality guardrails, technical accuracy guardrails, anti-AI checklist, post format, pre-publish checklist. The core writing skill used at the Draft and Guardrail Check stages. |
+| `LinkedIn_SKILL.md` | Voice profile, content pillars, confidentiality guardrails, technical accuracy guardrails, anti-AI checklist, post format, pre-publish checklist. The core writing skill used at the Draft and Guardrail Check stages. Updated directly whenever calibration feedback implies a durable rule. |
 | `anti-ai-writing-guide.md` | Voice-agnostic guide for detecting and eliminating AI-sounding patterns. Used at the Final stage. |
-| `linkedin-weekly-system.md` | This file. Describes the five-stage pipeline, review points, and content mix. |
+| `linkedin-weekly-system.md` | This file. Describes the pipeline phases, five stages, review points, and content mix. |
+| `voice-calibration-log.md` | Every post drafted during Calibration phase, with feedback and what it changed in the skill file. The record that decides when to graduate to Automated phase. |
+| `external-reference-posts.md` | External posts Om likes, with the technique extracted and checked against his voice before it touches the skill file. |
