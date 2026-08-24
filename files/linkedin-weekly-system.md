@@ -185,12 +185,24 @@ Move from Calibration to Automated when, looking at `voice-calibration-log.md`:
 - All three post modes (Technical/Personal/Informative) have at least one logged, approved
   example — not just Personal, which is what the original three calibration posts happened to
   be.
+- The Hook Formula Compatibility Table (`external-reference-posts.md`) has stopped changing —
+  no verdict has needed reclassifying in the last several reference posts checked against it.
+  Until then it stays a living table, revised whenever a verdict turns out to be conflating two
+  different mechanisms (see that file's F12/F13 reclassifications for what that looks like).
 - Om says so. This is ultimately his call, not a checklist the pipeline can tick off on its own.
 
 When that happens, update the Status block at the top of `voice-calibration-log.md` to
-`Phase: Automated` and note the date. The log doesn't stop — new posts still get added, and a
-post that clearly misses the voice still gets logged and folded back into `LinkedIn_SKILL.md` —
-but stage-by-stage review can compress per "Two Phases" above.
+`Phase: Automated` and note the date, and mark the compatibility table fixed in
+`external-reference-posts.md` (see that file's header for the exact note). The log doesn't stop —
+new posts still get added, and a post that clearly misses the voice still gets logged and folded
+back into `LinkedIn_SKILL.md` — but stage-by-stage review can compress per "Two Phases" above.
+
+**One distinction worth being precise about:** "Automated" here means automated *drafting* —
+the pipeline trusted to produce a near-final post with lighter review. It does not mean automated
+*posting*. There's still no LinkedIn posting connector wired up, so every post, in either phase,
+ends at "ready-to-paste text" and Om pastes it in himself. If auto-posting ever becomes part of
+this system, that's a separate, later decision — not something Automated phase implies on its
+own.
 
 ---
 

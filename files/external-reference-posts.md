@@ -94,6 +94,14 @@ copy its skeleton, and swap in Om's words.
 Verdict for all 16 formulas from `linkedin-hook-extractor`. Checked once, here, so it doesn't
 need re-litigating on every reference post.
 
+**Status: living table.** This is expected to keep changing as real posts get checked against
+it — see the F12 and F13 reclassifications below for what that revision process actually looks
+like. It fixes in place at the same point the pipeline graduates from Calibration to Automated
+(`linkedin-weekly-system.md` → "Graduating to Automated Phase") — once verdicts have gone
+several reference posts without needing to change, lock it and note the date here:
+
+`Fixed: not yet — still Calibration phase`
+
 | # | Formula | Verdict | Why |
 |---|---|---|---|
 | F1 | Anaphora (parallel "X can Y" lines) | Marginal | Parallel-structure lists read as an AI tell per `anti-ai-writing-guide.md` Part 2.3. Usable only rarely, for a genuinely earned rhetorical moment — never a default. |
