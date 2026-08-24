@@ -25,16 +25,23 @@ a rough note, a conversation, something he mentions in passing — never invent 
 
 ### 2. Angle
 
-Propose the specific take: what's the actual lesson, translation, or reflection, and roughly how
-should the post open (see `LinkedIn_SKILL.md` → Voice Profile → Opening pattern). If the research
-touches Geneverse/Sorus, flag right here what needs to be genericized and check the guardrail
-question early rather than after a full draft is written:
+Propose the specific take: what's the actual lesson, translation, or reflection, which pillar and
+post mode (Technical/Personal/Informative — see `LinkedIn_SKILL.md` → Post Modes) it should use,
+and roughly how the post should open (see `LinkedIn_SKILL.md` → Voice Profile → Opening pattern).
+
+For any claim in the angle, do a quick Voice Arc check (`LinkedIn_SKILL.md` → Voice Arc): has Om
+actually earned the confidence this angle implies, on this specific topic? Technical-mode claims
+grounded in his real scientific training can be direct from day one; operator/business claims
+should stay in learning-posture framing until he's genuinely got reps on that specific thing.
+
+If the research touches Geneverse/Sorus, flag right here what needs to be genericized and check
+the guardrail question early rather than after a full draft is written:
 
 *"If a competitor, a current Sorus partner's lawyer, or a Sorus exec read this, would it tell
 them anything that isn't already public?"*
 
-**Output Om reviews:** the proposed angle, pillar, and a first-pass confidentiality read, before
-any full draft is written.
+**Output Om reviews:** the proposed angle, pillar, mode, a Voice Arc confidence check, and a
+first-pass confidentiality read, before any full draft is written.
 
 ### 3. Draft
 
@@ -122,9 +129,14 @@ one pillar.
 ## Tracking
 
 Keep a simple running log (a file, sheet, or whatever the pipeline implementation uses) with, per
-post: date, pillar, post type, one-line topic, and guardrail result. This isn't a Notion-specific
-system — the pipeline architecture is Om's to implement; this file just describes what each
-stage needs to produce and check.
+post: date, pillar, mode (Technical/Personal/Informative), template used, one-line topic, and
+guardrail result. This isn't a Notion-specific system — the pipeline architecture is Om's to
+implement; this file just describes what each stage needs to produce and check.
+
+This log is also what makes the Voice Arc (`LinkedIn_SKILL.md`) usable over time — it's the
+record of which topics Om has actually built real reps on, which is what future Angle stages
+should check before deciding whether a claim has earned confident framing or still belongs in
+learning-posture framing.
 
 ---
 

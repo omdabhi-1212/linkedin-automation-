@@ -39,15 +39,60 @@ about the learning curve, not from claiming authority Om doesn't have yet.
 
 ---
 
+## Voice Arc — Confidence Grows With Earned Experience
+
+This system runs across Om's actual multi-year Geneverse/Sorus journey, not a single moment in
+it. The voice can't be locked to day one. Early self-deprecation is accurate right now — but a
+few years in, with a real track record, writing like he's still walking into his first room
+would be its own kind of inauthentic. The voice should mature the way Om actually does.
+
+**What scales with earned experience (recalibrate per post, per topic):**
+- How much a post frames Om as the least experienced person in the room. Right now, "I was
+  probably the dumbest person in the room" is literally true and should be said outright. Once
+  Om has real reps on a specific topic, drop the novice-framing by default and state the
+  observation plainly, as something he's actually learned — not something he's noticing for the
+  first time.
+- The reflective one-liner (see below) can shift from a tentative musing ("Medicine, I think,
+  has always waited for disease to show up") to a stated conviction ("Medicine has always waited
+  for disease to show up") once it's backed by real repetition, not a first impression.
+- Hedging language ("I don't know where this goes yet") is honest early-stage framing. Once Om
+  does know something because he's lived it, say so plainly instead of hedging out of habit.
+
+**Calibrate per claim, not by calendar date.** Om may have real authority on lab/genomics
+fundamentals from day one — that's his actual training — while still being genuinely early-stage
+on fundraising or go-to-market a year in. For each specific claim in a draft, ask: *has Om
+actually earned the confidence this sentence implies, on this specific thing?* If yes, state it
+plainly. If not, keep the honest, learning-posture framing. That's not modesty for its own sake,
+it's accuracy.
+
+**What never scales away, at any stage:**
+- Warmth and reflection over swagger. More confidence is not permission to become the
+  confrontational "brutal truth" voice banned below — that voice is wrong for Om at any career
+  stage, not just an early one.
+- Real uncertainty stated as uncertainty. Growing authority means saying more things plainly, not
+  performing certainty Om doesn't actually have.
+- Groundedness in something specific Om actually did. Authority earned through specificity and
+  track record, never through declaring himself an expert or reaching for "thought leader"
+  framing — see Narrative Positioning above. The pure-thought-leadership pillar stays lowest
+  priority permanently, not just in the early days.
+- No invented statistics, dates, or credentials, ever, regardless of how established Om becomes.
+
+---
+
 ## Voice Profile
 
 This profile is built from Om's real posts (HAI Conclave, Mumbai Tech Week, BiOZEEN fermentation
-post). It should be refined further after every batch of new posts — see "Keeping This Current"
-at the bottom of the file.
+post). It captures where Om's voice is right now — early in the journey. Read it alongside the
+Voice Arc above: the traits here are the starting point, not a permanent script. It should be
+refined further after every batch of new posts — see "Keeping This Current" at the bottom of the
+file.
 
 **How he sounds:**
-- Reflective, warm, curious. Not confrontational, not a guru, not dispensing advice from above.
-- Comfortable being the least experienced person in the room, and says so directly.
+- Reflective, warm, curious. Not confrontational, not a guru, not dispensing advice from above —
+  this holds at every stage of the Voice Arc.
+- Comfortable admitting the learning curve. Strongest right now, and stays strongest in
+  Personal-mode posts throughout the journey (see Post Modes below) — but per the Voice Arc,
+  fades toward plainly-stated observations as real experience accumulates on a given topic.
 - Narrative, essay-like paragraphs (2-4 sentences each), not fragment-heavy micro-formatting.
   This is a real difference from generic "LinkedIn voice" — Om's posts read like a reflective
   note, not a bullet-punched pitch.
@@ -113,8 +158,10 @@ LinkedIn voice — never use them):**
 - "crush it" / "saved my ass"
 - "nobody tells you this"
 - "Lesson learned?"
-- Any line that positions Om as dispensing hard-won wisdom from a position of authority he
-  doesn't have yet. He shares what he's noticing, not what everyone else is getting wrong.
+- Any line that positions Om as dispensing hard-won wisdom from a superior position, or telling
+  the reader what they're getting wrong. Even at a later, more confident stage, he shares what
+  he's learned from doing the work — he doesn't position himself above the reader. This ban
+  doesn't fade with the Voice Arc; the humility-framing above it does, this doesn't.
 
 **Never invent statistics, dates, credentials, or numbers.** If Om hasn't supplied a specific
 figure for this post, leave it out or ask him for it. A fabricated stat is both an AI tell and a
@@ -302,32 +349,75 @@ name; Sorus/Geneverse colleagues need explicit case-by-case clearance.
 
 ---
 
-## Post Types
+## Post Modes
 
-Simpler than a generic content-marketing taxonomy — these map to what Om actually writes.
+Every post has a topic (Pillar, above) and a mode — how it's written and how much confidence it
+carries. Pick both at the Angle stage of the pipeline (see `linkedin-weekly-system.md`). Modes
+are orthogonal to pillars: a Pillar 1 post can be Technical, Personal, or Informative depending
+on what it's actually doing.
 
-**1. Building-in-public lesson (Pillar 1)**
+**Technical**
+Explains or reports on an actual genomics/science concept, finding, or method. Correctness is
+paramount — always run the Technical Accuracy Guardrails on these. Confidence can be high from
+day one here, because it draws on Om's real scientific training, not on his track record as an
+operator — the Voice Arc's "earn it first" rule mainly governs business/operator claims, not
+established science he's actually trained in. Still grounded in something specific ("I was
+explaining X to a colleague when...") rather than a detached textbook explainer — that grounding
+is what keeps it in Om's voice instead of becoming generic science content.
+
+**Personal**
+Narrative, reflective, closest to the three calibration posts this profile was built from.
+Self-deprecation, admitted gaps, and comfortable uncertainty stay natural here throughout the
+whole journey — not because Om needs to perform humility, but because Personal-mode posts are
+about the human experience of doing the work, and real not-knowing shows up at every career
+stage, not just the beginning.
+
+**Informative**
+Translates a concept across the genomics/business boundary (the core of Pillar 2) or explains an
+industry mechanic. Confidence here scales the most visibly with the Voice Arc: early on, frame it
+as "here's how I'm learning to explain X to Y"; once Om has done this translation work
+repeatedly and it holds up, frame it as "here's how X actually works" without the
+learning-in-public hedge.
+
+---
+
+## Post Templates
+
+Cross Pillar (topic) and Mode (above) to pick the shape. These map to what Om has actually
+written or is likely to write next — not an exhaustive taxonomy, and new templates should get
+added here as his post history grows.
+
+**1. Building-in-public lesson — Pillar 1, usually Personal or Informative mode**
 A genericized takeaway from something happening at Geneverse/Sorus. Passes the guardrail
 question before anything else. Grounded in a real moment, generalized into a lesson.
 
-**2. Genomics ↔ business translation (Pillar 2)**
+**2. Genomics ↔ business translation — Pillar 2, Informative mode**
 Explains one concept across the genomics/business boundary, anchored in something Om is
 actually doing (an explainer post should still open with "I've been trying to explain X to
-Y" rather than a detached lecture).
+Y" — or, at a later Voice Arc stage, "here's how X actually works" — rather than a detached
+lecture either way).
 
-**3. Conference / event reflection (Pillar 3, sometimes Pillar 1/2)**
+**3. Conference / event reflection — Pillar 3 (sometimes 1/2), Personal mode**
 Modeled directly on the HAI Conclave and Mumbai Tech Week posts — a specific event, real people
 credited where appropriate, an honest admission of what went over his head, a reflective
 one-liner, a forward-looking close.
 
-**4. Personal build / skill-learning post (Pillar 2/3 crossover)**
+**4. Personal build / skill-learning post — Pillar 2/3, Personal/Informative crossover**
 Modeled on the "I made an AI agent to teach me pharma business mechanics" post — Om builds
 something to solve his own knowledge gap and writes about the gap and the build, not just the
 result.
 
-**5. Journey / life-transition post (Pillar 3, occasional)**
+**5. Journey / life-transition post — Pillar 3, Personal mode**
 Modeled on the BiOZEEN post — bigger-picture personal context (moving back to India, career
 uncertainty) anchoring a specific, concrete experience.
+
+**6. Technical explainer / finding post — Pillar 1 or 2, Technical mode**
+Goes into an actual genomics concept, method, or finding in depth — no calibration example yet
+(see "Keeping This Current"). Doesn't need the extra guardrail caution required for Pillar 1
+build-in-public lessons unless it touches something Om learned specifically through
+Geneverse/Sorus work, in which case Confidentiality Guardrails apply as normal. Confidence should
+be direct and plain per the Technical-mode guidance above — this is the one post type where
+day-one confidence is appropriate.
 
 ---
 
@@ -352,7 +442,9 @@ code block.
 
 After the post, add a brief note:
 - Approximate character count
-- Content pillar (1, 2, or 3) and post type
+- Content pillar (1, 2, or 3), post mode (Technical/Personal/Informative), and template used
+- Voice Arc calibration: which claims, if any, leaned on earned confidence vs. learning-posture
+  framing, and why that was the right call for this specific topic
 - Confidentiality guardrail result: pass, or what was cut/genericized and why
 - Technical accuracy notes: any claim that should get a second look from Om before posting
 - Anything flagged from the anti-AI checklist that needed a rewrite
@@ -368,6 +460,10 @@ Before finalizing, verify:
 - [ ] **Technical accuracy checked** — no overclaimed causal genomics language, no invented
       numbers or study claims
 - [ ] Fits one of the three content pillars
+- [ ] Post mode identified (Technical/Personal/Informative)
+- [ ] Confidence level matches Om's actual earned experience on each specific claim — not
+      over-hedged if he's genuinely earned the authority, not overclaimed if he hasn't (see
+      Voice Arc)
 - [ ] Doesn't use the word "intern" as self-description
 - [ ] Opens with a grounded, specific scene — not a hook-bait line
 - [ ] Contains a reflective one-liner if the material supports one
@@ -410,6 +506,17 @@ genomics partnerships," this is fine. Named and quantified like this, it's not.
 "This gene causes early-onset heart disease." (Overclaimed. Almost certainly should be
 "associated with elevated risk of.")
 
+**Voice Arc failure — claiming authority too early:**
+"After my time in genomics R&D, I can tell you the biggest mistake founders make in this space."
+(Om hasn't earned this framing yet on the business side — see Voice Arc. The Personal-mode,
+earned version of this same insight admits it's a fresh observation, not settled wisdom.)
+
+**Voice Arc failure — staying falsely humble once earned:**
+A post that hedges a claim Om has real, repeated, demonstrated experience with ("I'm not sure,
+but maybe...") when he's actually done the specific thing enough times to say it plainly. This
+reads as performed modesty rather than honesty once there's a real track record behind it — see
+Voice Arc above.
+
 For the full breakdown of generic AI writing patterns with side-by-side rewrites, see
 `anti-ai-writing-guide.md`.
 
@@ -442,7 +549,7 @@ making time for someone just starting out.
 So this is my new thing. Find the rooms where I am the dumbest person, and get in. Every
 conversation becomes a chance to learn. That is a rare luxury, and I want more of it.
 
-### Example: Personal build / skill-learning post (Pillar 2)
+### Example: Personal build / skill-learning post (Pillar 2, Personal/Informative crossover)
 
 Coming from the world of cells, a lot of it went over my head at first. The vocabulary was its
 own language, and the presentations moved faster than I could follow.
@@ -457,15 +564,27 @@ So I made an AI agent that pulls real-time pharma news and uses it to teach me t
 mechanics behind it. Funding, pricing, deals, market moves, explained through what is actually
 happening that week. No code. Just a clear problem and the right tools.
 
+**A note on these two examples:** both are early-stage Personal-mode posts — that's what Om has
+actually written so far, so it's what the calibration reference can show. No Technical-mode or
+later-Voice-Arc example exists yet. Once Om writes posts from a more established position on a
+given topic, or a Technical-mode post, add them here rather than guessing at what that voice
+sounds like in the abstract.
+
 ---
 
 ## Keeping This Current
 
-This voice profile was built from three real posts. It will sharpen with use. After every batch
-of posts:
-- If a sentence felt wrong or a word Om would never say slipped in, add it to the banned list
-  above.
-- If a post performed well and captured his voice cleanly, add it to the "What GOOD Looks Like"
-  section as a new calibration example.
-- If the confidentiality guardrail catches something close to a real leak, note the pattern here
-  so future drafts avoid it earlier, before a full draft is written.
+This voice profile was built from three real posts, all early-stage and Personal-mode. It will
+sharpen with use, and it needs to grow in two directions over time, not just get more detailed:
+
+- **New calibration examples.** If a post performed well and captured his voice cleanly, add it
+  to "What GOOD Looks Like" — especially once Technical-mode or Informative-mode posts exist, or
+  once a post lands the later-Voice-Arc, more-confident register. Right now those are
+  described from the brief, not demonstrated from real writing.
+- **Voice Arc tracking.** Periodically check, per pillar and per mode: has Om's real experience
+  grown enough on this specific topic that hedging/novice-framing should start fading in future
+  drafts? Note it here when it does, so the shift is deliberate rather than accidental.
+- **Corrections.** If a sentence felt wrong or a word Om would never say slipped in, add it to
+  the banned list above.
+- **Guardrail near-misses.** If the confidentiality guardrail catches something close to a real
+  leak, note the pattern here so future drafts avoid it earlier, before a full draft is written.
