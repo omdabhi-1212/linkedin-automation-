@@ -437,6 +437,7 @@ day-one confidence is appropriate.
 | **A business/ops concept to explain** | Same as above, mirrored for a genomics-fluent audience. |
 | **Draft text from Om** | Tighten, don't rewrite the voice out of it. If he wrote it, it already sounds like him — the job is trimming AI-ish filler if any crept in, not replacing his sentences. |
 | **A number or stat** | Confirm it's something Om actually has, not something inferred or estimated. If unconfirmed, ask before using it. |
+| **A structural principle from `external-reference-posts.md`** | Use the prose description as inspiration for a structural choice (an opening move, a closing device). Write original paragraphs shaped by that idea. **Never** open the source post, copy its skeleton, or fill in a `{slot}`-marker template from `linkedin-hook-extractor` — see that file's "Never Hand Off a Blank Template" for why a template is a shortcut back to AI-smell, just imported from someone else's post instead of generated fresh. |
 
 ---
 

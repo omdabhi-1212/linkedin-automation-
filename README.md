@@ -26,7 +26,8 @@ pillars, and guardrails are all specific to Om's context.
 | `files/anti-ai-writing-guide.md` | Voice-agnostic guide for not sounding like AI — banned vocabulary, structure rules, tone rules, formatting tells, and an editing checklist. |
 | `files/linkedin-weekly-system.md` | The weekly pipeline: Research → Angle → Draft → Guardrail Check → Final, plus the Calibration → Automated phase model. Describes what Om reviews at each stage. |
 | `files/voice-calibration-log.md` | Every post drafted together during calibration, with Om's real feedback and what it changed in the skill file. Determines when the pipeline graduates from Calibration to Automated. |
-| `files/external-reference-posts.md` | Other people's posts Om likes, with the specific technique extracted and checked against his own voice before anything is adopted. |
+| `files/external-reference-posts.md` | Other people's posts Om likes, with the specific technique extracted and checked against his own voice before anything is adopted. Holds the Hook Formula Compatibility Table. |
+| `files/linkedin-hook-extractor/` | A downloaded post-structure classifier, adapted here: 8 of its 16 "viral hook formulas" are banned outright as engagement-bait or guru-voice mechanics that conflict with the voice profile. Feeds `external-reference-posts.md` only, and never hands over a fill-in-the-blank template — see that file for why. |
 
 ## Content Pillars
 

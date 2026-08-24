@@ -151,7 +151,7 @@ one pillar.
 | Rejects or edits a stage's output | Pipeline reworks that stage before moving on — never skips ahead on an unapproved stage |
 | "Is this safe to post?" | Runs the Guardrail Check stage standalone against provided text |
 | "What's my content mix looked like this month?" | Reviews recent posts against the pillar mix above |
-| "I like this post" / Om shares an external post with notes | Logs it in `external-reference-posts.md` — pin down the specific technique, check it against Om's voice, before touching `LinkedIn_SKILL.md` |
+| "I like this post" / Om shares an external post with notes | Optionally runs `linkedin-hook-extractor` to name the technique, checks the Hook Formula Compatibility Table in `external-reference-posts.md` first — a Banned formula never gets logged as a candidate — then logs a passing one, extracted as a prose principle, never a fillable template |
 | "That's not me" / "keep that, that's exactly right" on a draft | Logs the feedback in `voice-calibration-log.md` for the current post, and updates `LinkedIn_SKILL.md` if it's a durable rule, not a one-off |
 | "Are we ready to automate?" | Checks the Graduating to Automated Phase criteria below against `voice-calibration-log.md` |
 
@@ -202,4 +202,5 @@ but stage-by-stage review can compress per "Two Phases" above.
 | `anti-ai-writing-guide.md` | Voice-agnostic guide for detecting and eliminating AI-sounding patterns. Used at the Final stage. |
 | `linkedin-weekly-system.md` | This file. Describes the pipeline phases, five stages, review points, and content mix. |
 | `voice-calibration-log.md` | Every post drafted during Calibration phase, with feedback and what it changed in the skill file. The record that decides when to graduate to Automated phase. |
-| `external-reference-posts.md` | External posts Om likes, with the technique extracted and checked against his voice before it touches the skill file. |
+| `external-reference-posts.md` | External posts Om likes, with the technique extracted and checked against his voice before it touches the skill file. Holds the Hook Formula Compatibility Table. |
+| `linkedin-hook-extractor/` | Adapted downloaded tool that classifies an external post's structure into one of 16 named formulas. Feeds `external-reference-posts.md` only — gated by the compatibility table, never produces output used directly in a draft. |
