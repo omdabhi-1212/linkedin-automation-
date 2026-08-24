@@ -1,0 +1,137 @@
+# Om's Weekly LinkedIn Content Pipeline
+
+## How It Works
+
+One post per week. Low-effort, high-quality — not a volume play. Om reviews and approves at
+every stage, not just the final text. Nothing publishes automatically: there is no LinkedIn
+posting connector, so the pipeline's output is always a finished, ready-to-paste post waiting on
+Om to post it himself.
+
+The pipeline runs five stages. Each stage produces something Om looks at before the next stage
+starts.
+
+---
+
+## The Five Stages
+
+### 1. Research
+
+Gather raw material for the week's post: something that happened at Geneverse/Sorus worth
+generalizing (Pillar 1), a genomics or business concept worth translating (Pillar 2), or an
+event/experience worth reflecting on (Pillar 3). Pull from whatever Om supplies that week —
+a rough note, a conversation, something he mentions in passing — never invent source material.
+
+**Output Om reviews:** raw notes and a proposed content pillar, before any drafting starts.
+
+### 2. Angle
+
+Propose the specific take: what's the actual lesson, translation, or reflection, and roughly how
+should the post open (see `LinkedIn_SKILL.md` → Voice Profile → Opening pattern). If the research
+touches Geneverse/Sorus, flag right here what needs to be genericized and check the guardrail
+question early rather than after a full draft is written:
+
+*"If a competitor, a current Sorus partner's lawyer, or a Sorus exec read this, would it tell
+them anything that isn't already public?"*
+
+**Output Om reviews:** the proposed angle, pillar, and a first-pass confidentiality read, before
+any full draft is written.
+
+### 3. Draft
+
+Write the full post using `LinkedIn_SKILL.md` — voice, structure, format, post type. This is
+where the actual writing skill does its work.
+
+**Output Om reviews:** the full draft, plus the skill's standard output note (character count,
+pillar, post type).
+
+### 4. Guardrail Check
+
+A dedicated pass over the finished draft against both hard gates in `LinkedIn_SKILL.md`:
+
+- **Confidentiality** — no partnership terms, no named partners without clearance, no unreleased
+  pack names, no pricing, no competitor intel, no internal metrics, no unauthorized colleague
+  names.
+- **Technical accuracy** — no overclaimed causal genomics language, no invented statistics,
+  dates, or study claims.
+
+This stage runs even if the Angle stage already looked safe — a draft can drift during writing.
+Anything that fails gets cut or genericized further, not softened with a caveat.
+
+**Output Om reviews:** a pass/fail note per gate, with the specific sentence(s) flagged and how
+they were fixed (or a question back to Om if the fix isn't obvious, e.g. "is this colleague OK
+to name?").
+
+### 5. Final
+
+Run the AI Detection Layer and Pre-Publish Checklist from `LinkedIn_SKILL.md` (vocabulary,
+structure, tone, formatting, specificity, read-aloud). Deliver the finished post ready to
+copy-paste.
+
+**Output Om reviews:** the final post text and the full checklist result. This is what Om
+actually copies into LinkedIn.
+
+---
+
+## Quality Gates, In Order
+
+Confidentiality and technical accuracy are checked before the anti-AI layer, not after — a post
+that sounds perfectly human but leaks something or states something wrong is a worse outcome
+than a post that sounds slightly AI-ish. All three risks are weighted equally per Om's own
+priorities, but confidentiality and accuracy are irreversible once posted; voice is not.
+
+1. Confidentiality guardrail (`LinkedIn_SKILL.md` → Confidentiality Guardrails)
+2. Technical accuracy guardrail (`LinkedIn_SKILL.md` → Technical Accuracy Guardrails)
+3. Anti-AI detection layer (`anti-ai-writing-guide.md` + `LinkedIn_SKILL.md` → AI Detection
+   Layer)
+
+---
+
+## Content Mix (Priority Order)
+
+Reflects Om's own ranking for why this account exists, not equal weighting:
+
+1. Building audience/network in genomics-entrepreneurship — most posts should serve this
+2. Documenting the Geneverse/Sorus journey publicly — Pillar 1, the most common post type
+3. Credibility for MBA/career opportunities — a natural byproduct, not a separate content type
+4. Pure thought leadership on genomics + AI — lowest priority; a post with no build-in-public or
+   translation angle at all should be rare
+
+At one post a week (roughly 4 a month), a reasonable mix looks like:
+- 2-3 Pillar 1 posts (building-in-public, genericized)
+- 1 Pillar 2 post (genomics ↔ business translation)
+- 0-1 Pillar 3 post (personal/curiosity)
+
+This isn't a strict quota — it's a check to run monthly if the mix starts drifting toward only
+one pillar.
+
+---
+
+## Trigger Phrases
+
+| Om says | Pipeline does |
+|---|---|
+| "Let's do this week's post" / gives a topic or raw note | Starts at Research with that input |
+| "Here's what happened this week" | Starts at Research, pillar TBD until angle stage |
+| Approves a stage's output | Pipeline moves to the next stage |
+| Rejects or edits a stage's output | Pipeline reworks that stage before moving on — never skips ahead on an unapproved stage |
+| "Is this safe to post?" | Runs the Guardrail Check stage standalone against provided text |
+| "What's my content mix looked like this month?" | Reviews recent posts against the pillar mix above |
+
+---
+
+## Tracking
+
+Keep a simple running log (a file, sheet, or whatever the pipeline implementation uses) with, per
+post: date, pillar, post type, one-line topic, and guardrail result. This isn't a Notion-specific
+system — the pipeline architecture is Om's to implement; this file just describes what each
+stage needs to produce and check.
+
+---
+
+## Project Files Reference
+
+| File | Purpose |
+|---|---|
+| `LinkedIn_SKILL.md` | Voice profile, content pillars, confidentiality guardrails, technical accuracy guardrails, anti-AI checklist, post format, pre-publish checklist. The core writing skill used at the Draft and Guardrail Check stages. |
+| `anti-ai-writing-guide.md` | Voice-agnostic guide for detecting and eliminating AI-sounding patterns. Used at the Final stage. |
+| `linkedin-weekly-system.md` | This file. Describes the five-stage pipeline, review points, and content mix. |
