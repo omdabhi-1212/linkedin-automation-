@@ -108,16 +108,23 @@ need re-litigating on every reference post.
 | F10 | Contrarian-historical + identity reframe ("if you're X, you already lost") | **Banned** | Guru-voice, confrontational persona — the exact register dropped when this system moved off the original coaching-voice skill. |
 | F11 | Emotional cold-open (no setup) | Marginal | More abrupt than Om's demonstrated pattern, which is grounded and temporal, not scene-first-no-context. Situational at best, never the default opening. |
 | F12 | Permission slip ("I don't know who needs to hear this") | **Banned** | A LinkedIn-influencer cliché functioning as engagement-bait reassurance. Also just not a phrase Om would say. |
-| F13 | Bait-and-switch (fake bad news that resolves positive) | **Banned** | Manufactured tension for effect. Conflicts with the honesty this whole voice is built on — see Voice Arc's "real uncertainty stated as uncertainty." |
+| F13 | Bait-and-switch (fake bad news that resolves positive) | Needs adaptation | Banned only in its manufactured form — a fabricated or exaggerated crisis walked back with an explicit "just kidding, actually..." reveal purely for hook effect. Fine, and close to Om's natural mode, when the hardship is real and specific and the resolution is genuine, told in order with no flagged reversal: e.g. "For three weeks, I thought this partnership might not survive... It's still not resolved the way I expected, but we found a structure I actually believe in." True, proportionate low point, honest turn, no "okay not really" pivot anywhere. |
 | F14 | Named gratitude (roll-call of people thanked) | **Already-native** | Matches the HAI Conclave post exactly. Already governed by the Names section and Confidentiality Guardrails in `LinkedIn_SKILL.md` — external people with real credit, never Sorus/Geneverse colleagues without clearance. |
 | F15 | Explain-to-kids | Needs adaptation | Could work for Pillar 2 Informative-mode posts if genuinely accessible, not gimmicky or condescending. |
 | F16 | Status-strip identity contrast | Marginal | More dramatic than Om's understated tone. Situational, needs the confrontational edge sanded off if used at all. |
 
-**Reading this table:** 8 of 16 formulas are banned outright — not because they "don't sound like
+**Reading this table:** 7 of 16 formulas are banned outright — not because they "don't sound like
 Om" in a soft, negotiable way, but because they collide with rules already locked into
 `LinkedIn_SKILL.md` (engagement-bait bans, no hard CTAs, no clickbait hooks, no guru-voice). 2 are
-already how Om naturally writes and don't need "adapting" so much as recognizing. The remaining 6
+already how Om naturally writes and don't need "adapting" so much as recognizing. The remaining 7
 range from usable-with-real-changes to situational-at-best — none of them get used as delivered.
+
+**A verdict isn't permanent.** F13 (bait-and-switch) started as Banned and moved to Needs
+adaptation once the actual mechanism was examined closely enough to separate the manipulative
+version (a staged crisis with a flagged "just kidding" reveal) from an authentic one (a real,
+proportionate hardship followed by a genuine turn, no reveal needed). Revisit a verdict the same
+way if it turns out to be conflating two different things — the fix is almost always a sharper
+distinction, not a blanket loosening.
 
 ---
 
