@@ -109,10 +109,13 @@ to name?").
 
 Run the AI Detection Layer and Pre-Publish Checklist from `LinkedIn_SKILL.md` (vocabulary,
 structure, tone, formatting, specificity, read-aloud). Deliver the finished post ready to
-copy-paste.
+copy-paste, plus the **visual companion recommendation** (`LinkedIn_SKILL.md` → Visual Companion
+Recommendation) — whether a visual would help, what type, a concrete description, source-vs-generate,
+and any confidentiality note — and the **topic tag(s)** for the Topic Reps Tally.
 
-**Output Om reviews:** the final post text and the full checklist result. This is what Om
-actually copies into LinkedIn.
+**Output Om reviews:** the final post text, the full checklist result, the visual recommendation,
+and the topic tags. This is what Om actually copies into LinkedIn; the visual is his to act on or
+skip.
 
 ---
 

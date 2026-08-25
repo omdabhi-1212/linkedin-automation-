@@ -10,6 +10,23 @@ Severity: 🔴 could sink the whole goal · 🟠 real quality/risk cost · 🟡 
 
 ---
 
+## Post-critique decisions (secondary tensions Om ruled on)
+
+Three lower-stakes tensions surfaced after the main list; Om's calls, recorded here:
+
+- **Discoverability vs. authenticity (hashtags/hooks).** Kept: 3-5 topic hashtags, hooks only when
+  they work with the organic content. Not a fixed ceiling — a **watch-item** tied to the Post
+  Performance Log. If reach stays flat, revisit. (In `LinkedIn_SKILL.md` → Post Format.)
+- **No visual strategy.** Resolved with a **Visual Companion Recommendation** at the Final stage —
+  a recommendation engine (whether/what/how, source-or-AI-generate, with a confidentiality note),
+  not a generator. A real visual-generation step stays a future build if reach data justifies it.
+  (In `LinkedIn_SKILL.md` → Visual Companion Recommendation.)
+- **Multi-topic rep attribution.** Resolved: a post **counts as a rep for every topic it genuinely
+  covers**, deliberately — this surfaces which topic combinations work and which topics are being
+  under-served. (In `voice-calibration-log.md` → Topic Reps Tally.)
+
+---
+
 ## 🔴 1. The viral-content wing pulls toward the exact mean the voice profile fights
 
 **Mechanism.** The entire system exists to sound like Om, not like generic LinkedIn. Wing B of the

@@ -367,6 +367,41 @@ entirely rather than padding.
 credit are fine for external people (conference speakers, mentors) Om has real permission to
 name; Sorus/Geneverse colleagues need explicit case-by-case clearance.
 
+**Hashtags and hooks are watch-items, not fixed law.** 3-5 topic-specific hashtags is the current
+ceiling, and a hook is used only if it works *with* Om's organic content, never bolted on for
+reach. Both are deliberately dialed toward authenticity over discoverability — which trades away
+some new-audience reach (goal #1). That trade is intentional for now, but it's tracked: if the Post
+Performance Log (`voice-calibration-log.md`) shows reach staying flat, revisit the hashtag ceiling
+and how much hook the organic voice can carry. Adjust based on real performance data, not a
+one-time rule.
+
+---
+
+## Visual Companion Recommendation
+
+The posts are text-first, but LinkedIn in 2026 materially favors visual formats (carousels,
+infographics, single strong images) for reach. Rather than build a full visual pipeline now, every
+post gets a **visual recommendation** at the Final stage — a suggestion Om can act on or ignore.
+
+For each post, recommend:
+- **Whether a visual would genuinely help** — not every post needs one. A raw personal reflection
+  often lands harder as plain text. A framework, a data point, a process, or a
+  genomics-concept-explainer usually benefits. Say honestly when the answer is "none needed."
+- **What type** — single image / infographic / carousel / simple diagram — matched to the content
+  (a step process → carousel; a data point → infographic; a concept → diagram).
+- **A concrete description** of what the visual should show, specific enough that it could be
+  either **sourced** (a real photo Om has, a real chart) or **AI-generated** from the description.
+  Flag which route fits: real imagery is better for anything Om personally did or was at (a lab, a
+  conference); AI-generation fits abstract concepts and diagrams.
+- **A confidentiality note** if relevant — a visual can leak as easily as text. Never recommend an
+  image that shows internal Sorus/Geneverse material (lab setups, unreleased products, internal
+  dashboards, colleagues without clearance). The same guardrails apply to the picture as to the
+  words.
+
+This is a recommendation engine, not a generator — it tells Om what visual would work and how to
+get it, and he decides. If reach data later justifies it, a real visual-generation step is a
+future build.
+
 ---
 
 ## Post Modes
@@ -469,6 +504,11 @@ After the post, add a brief note:
 - Confidentiality guardrail result: pass, or what was cut/genericized and why
 - Technical accuracy notes: any claim that should get a second look from Om before posting
 - Anything flagged from the anti-AI checklist that needed a rewrite
+- **Visual recommendation** (see Visual Companion Recommendation): whether a visual would help,
+  what type, a concrete description, source-vs-AI-generate, and any confidentiality note — or
+  "none needed" with a one-line why
+- **Topic tag(s)** for the Topic Reps Tally in `voice-calibration-log.md` — every topic the post
+  genuinely covers (multi-topic posts tag all of them)
 
 ---
 
@@ -497,6 +537,9 @@ Before finalizing, verify:
 - [ ] At most 1 functional emoji, at most 3-5 relevant hashtags
 - [ ] No invented statistics, dates, or credentials
 - [ ] Read-aloud test passed — sounds like Om, not a LinkedIn voice
+- [ ] Visual companion recommendation produced (type + description + source/generate + confidentiality
+      note, or an honest "none needed")
+- [ ] Topic tag(s) noted for the Topic Reps Tally
 
 ---
 

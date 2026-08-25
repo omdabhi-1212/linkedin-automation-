@@ -88,6 +88,13 @@ days on this topic). Increment when a post is approved, using its **Topic(s)** f
 |---|---|---|
 | _(none yet)_ | 0 | |
 
+**Multi-topic posts count for every topic they genuinely cover** — a post that's half "fermentation"
+and half "science-to-business" is a rep for both. Two reasons this is deliberate, not sloppy: it
+surfaces which topic *combinations* Om keeps returning to (and which land — cross-reference the
+Performance Log), and it makes under-served topics obvious (a topic stuck at 0-1 reps is one the
+account has been ignoring). Count a topic only if the post says something real about it, not if it's
+a passing mention — 2-3 topics per post is a sane ceiling before the tagging becomes noise.
+
 Reps is a count, not a quality measure — see the Performance Log below for whether posts landed.
 A high rep count on a topic is the signal to start dropping the novice-framing for it (Voice Arc),
 independent of how any single post performed.
