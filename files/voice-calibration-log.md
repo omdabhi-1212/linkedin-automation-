@@ -5,9 +5,13 @@ the actual mechanism behind `LinkedIn_SKILL.md`'s "Keeping This Current" section
 vague "refine over time," every change to the voice profile should trace back to a specific
 entry here.
 
-**Two things live in this file:**
+**Four things live in this file:**
 1. Posts drafted together, with Om's real feedback on each draft.
 2. What that feedback changed in `LinkedIn_SKILL.md`, if anything.
+3. A **Topic Reps Tally** — how many posts Om has written per topic, the ground truth for the
+   Voice Arc's "earned confidence."
+4. A **Post Performance Log** — how posted content actually did, feeding topic/angle selection
+   (not the voice profile).
 
 Not every entry produces a change. If a draft nails it on the first try, that's a data point too
 — it confirms something in the current voice profile is already right.
@@ -63,7 +67,46 @@ here" / "good, keep this exact structure next time"]
 "nothing, this draft confirmed the current profile is accurate"]
 
 **Status:** [Approved and posted / Approved, not yet posted / Reworked / Scrapped]
+
+**Topic(s):** [the topic tags this post counts toward — e.g. "fermentation", "data-ownership",
+"AI-in-diagnostics" — used to increment the Topic Reps Tally below]
+
+**Performance (fill in ~1-2 weeks after posting):** [Om's read — reach, meaningful comments, who
+engaged, and a one-word verdict: worked / okay / flopped. Left blank until then.]
 ```
+
+---
+
+## Topic Reps Tally
+
+How many posts Om has actually written on each topic. This is the ground truth for the Voice Arc
+in `LinkedIn_SKILL.md` — the Angle stage consults this to decide whether a claim has *earned*
+confident framing (Om has real reps here) or still belongs in learning-posture framing (early
+days on this topic). Increment when a post is approved, using its **Topic(s)** field.
+
+| Topic | Reps | Notes |
+|---|---|---|
+| _(none yet)_ | 0 | |
+
+Reps is a count, not a quality measure — see the Performance Log below for whether posts landed.
+A high rep count on a topic is the signal to start dropping the novice-framing for it (Voice Arc),
+independent of how any single post performed.
+
+---
+
+## Post Performance Log
+
+Separate from voice calibration on purpose: a post can be perfectly Om-voiced and still land flat,
+and that's not a voice failure — it's a topic/angle signal. This log feeds the **Research** and
+**Angle** stages (what topics and angles actually build audience, goal #1), never the voice
+profile. Fill in ~1-2 weeks after each post goes up.
+
+| # | Date posted | Topic | Pillar/Mode | Verdict | What Om noticed |
+|---|---|---|---|---|---|
+| _(none yet)_ | | | | | |
+
+Over time, patterns here (which pillars, topics, or angles consistently land) should shape what the
+Angle stage reaches for first — a genuinely different loop from "does it sound like Om."
 
 ---
 

@@ -29,13 +29,15 @@ different, smaller thing than what this tool originally did.
 
 ## Input
 
-A LinkedIn post URL, or (the default here, since no Apify token is configured) the pasted post
-text.
+The pasted text of a LinkedIn post. This tool is **paste-only** — there is no URL parser, no
+scraper, and no Apify integration in this setup (the original download referenced `lib.url_parser`
+and `lib.ApifyClient`; those don't exist here and have been stripped, not stubbed). If Wing B is
+ever automated via a third-party API, that's a separate later build (see `../research-agent.md`);
+until then, Om pastes the text.
 
 ## Steps
 
-1. **Get the post text.** Ask Om to paste it — there's no scraping integration wired up in this
-   setup.
+1. **Get the post text.** Om pastes it.
 2. **Classify.** Match against the 16 formulas using the features in
    `references/classification-rules.md`.
 3. **Check compatibility before doing anything else with the result.** Look up the classified

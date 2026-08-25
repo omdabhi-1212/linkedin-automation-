@@ -266,6 +266,21 @@ two risks).
   scrutiny — don't invent a stat because it makes the post land better. See "Never invent
   statistics" above.
 
+**Citation requirement (the accuracy gate needs a source, not the model's memory).** For any hard
+scientific or numeric claim in a Technical-mode post — a study finding, a mechanism, a statistic, a
+stated consensus — there must be a **real source behind it before it clears**, not just the model's
+(or Om's half-remembered) assertion. The research agent's Wing A and the Consensus MCP exist partly
+for this: route the claim through a real paper. If no source can be produced, the claim gets one of
+two outcomes, never a third:
+- **Qualified down** to exactly what Om can personally stand behind ("in my experience," "as I
+  understand it") — and only if that honest, hedged version is still worth saying.
+- **Flagged "Om must verify"** in the output note, so it never ships on the model's word alone.
+
+The gate's job is to demand provenance, not to judge plausibility — a confident-sounding claim with
+no source is exactly the failure mode this guards against. This applies hardest to Technical mode;
+Personal and Informative posts that make a factual scientific claim get the same treatment for that
+specific claim.
+
 ---
 
 ## AI Detection Layer

@@ -17,11 +17,11 @@ research agent mines viral LinkedIn content — which is, definitionally, conten
 being generic-LinkedIn-optimal. Feed "what makes posts go viral" into an LLM drafter and it drifts
 toward that mean, undoing the anti-AI work. This is the deepest tension in the design.
 
-**Fix [partly done].** The hook-extractor already outputs a prose *principle*, never a template,
-and the compatibility gate already bans 6 of the most manipulative formulas. The missing hard rule,
-now written into `research-agent.md`: **Wing B may shape a post's structure, never its voice or
-content.** Virality tells you a topic is hot or a hook-shape works; it never tells you what Om
-thinks or how he sounds. A stronger version worth considering: cap how often a Wing-B-influenced
+**Fix [done].** The hook-extractor outputs a prose *principle*, never a template; the compatibility
+gate bans the manipulative formulas; and `research-agent.md` now carries both the hard rule —
+**Wing B may shape a post's structure, never its voice or content** — and Om's framing that Wing B
+is an *informed authoring decision, never a blind copy-paste* (understand why content resonates,
+keep the process organic). Still worth considering later: cap how often a Wing-B-influenced
 structure can be used (e.g. never two weeks running), so the account never becomes a viral-format
 tribute act.
 
@@ -53,12 +53,13 @@ which is confidential. It will confidently clear something that's actually inter
 to let the agent ingest internal material sharpens this: now confidential text is *in the pipeline*,
 not just in Om's head.
 
-**Fix [done in research-agent.md].** Treat Om as the only reliable oracle for public-vs-internal.
-Internal-sourced material is tagged, quarantined, and any draft touching it is **forced through
-mandatory human review** at Guardrail Check — the model never auto-clears internal-sourced content.
-The gate's job shifts from "decide if it's safe" (which it can't) to "detect that it *might* not be
-and escalate to Om" (which it can). Om's end-audit becomes the last line behind the quarantine, not
-the only line.
+**Fix [done — resolved at the source].** Om's decision: the scraper ingests **public sources
+only** (`research-agent.md` → Confidentiality). Internal material never enters via the scraper —
+it stays Om's manual input, genericized by him. This resolves the flaw structurally rather than by
+mitigation: the scraper can't misjudge public-vs-internal because it's barred from internal
+material in the first place. The residual judgment call (is *this specific generalized lesson* safe)
+stays with Om at Guardrail Check, which is where it always was and where it belongs — he doesn't
+approve any post he isn't sure of.
 
 ---
 
@@ -84,10 +85,11 @@ the real adversary — which is fine in Calibration, but this gap is what makes 
 genomics is right. In a technical field, confident-but-wrong is the worst outcome (it's Risk 3 in
 the brief, credibility-costly), and it's exactly what LLMs do.
 
-**Fix [design in research-agent.md].** For Technical-mode posts, require a **real citation** from
-Wing A / the Consensus MCP, not a model assertion. If there's no source, the claim gets qualified
-down to what Om can personally stand behind or cut. The accuracy gate should demand provenance, not
-just plausibility.
+**Fix [done in LinkedIn_SKILL.md → Technical Accuracy Guardrails].** For any hard scientific/numeric
+claim, a **real citation** (Wing A / Consensus MCP) is required before it clears — not a model
+assertion. No source → the claim is either qualified down to exactly what Om can personally stand
+behind, or flagged "Om must verify" in the output note. The gate now demands provenance, not
+plausibility.
 
 ---
 
@@ -98,10 +100,11 @@ observes whether posts *actually did that*. It optimizes purely for voice fideli
 safety — a post can be perfectly Om-voiced, perfectly safe, and land flat, and the system learns
 nothing. Voice calibration and audience outcomes are different things, and only the first has a loop.
 
-**Fix.** A lightweight **post-performance log**, separate from voice calibration: after a post is up
-a week or two, Om notes how it did (reach, meaningful comments, who engaged) in one line. That feeds
-*topic/angle selection* at the Research and Angle stages — not the voice. Keeps the two loops
-separate (a flat post isn't a voice failure) while finally closing the loop on the actual goal.
+**Fix [done in voice-calibration-log.md → Post Performance Log].** A lightweight post-performance
+log, separate from voice calibration: ~1-2 weeks after a post goes up, Om notes how it did (reach,
+meaningful comments, who engaged, a one-word verdict). It feeds *topic/angle selection* at the
+Research and Angle stages — not the voice. The two loops stay separate (a flat post isn't a voice
+failure) while the loop on the actual goal finally closes.
 
 ---
 
@@ -126,10 +129,12 @@ counts reps. The calibration log is supposed to be the evidence, but with 0 entr
 in practice the Arc is a vibe, not a mechanism — the model will guess when Om has "earned" more
 authority.
 
-**Fix.** Give the tracking log a **per-topic rep counter** (how many posts Om has actually written
-on fermentation, on partnerships, on AI-in-diagnostics), and make the Angle-stage Voice Arc check
-*consult* it rather than guess. Confidence framing then keys off a real count, not the model's
-impression. Inert until flaw #2/#7 give it data to count.
+**Fix [done in voice-calibration-log.md → Topic Reps Tally].** A per-topic rep counter (how many
+posts Om has actually written on fermentation, on partnerships, on AI-in-diagnostics), which the
+Angle-stage Voice Arc check now *consults* rather than guesses. Confidence framing keys off a real
+count. Related to but distinct from the performance log (flaw #6): reps = how *many* posts on a
+topic; performance = how *well* they did. Both are needed, and both stay inert until flaw #2/#7 give
+them data to count.
 
 ---
 
@@ -139,10 +144,11 @@ impression. Inert until flaw #2/#7 give it data to count.
 up, tokens get spent on marginal items, and the signal Om actually wanted drowns. It's the opposite
 of the "information-dense sources" instinct that motivated the whole thing.
 
-**Fix [design in research-agent.md].** A tight Interest Profile with **ranked axes, explicit
-exclusions, relevance scoring, a hard daily item cap, and aggressive TTL** on unused items. The
-exclusion list matters as much as the include list. Scope discipline is what keeps a passive
-collector useful past week two.
+**Fix [done in interest-profile.md].** A tight, tiered Interest Profile (Core / Adjacent /
+Personal-journey + a Business-of-genomics lens) with **ranked keywords, explicit exclusions,
+relevance scoring, a hard daily item cap, and aggressive TTL** on unused items. The exclusion list
+is written out, not implied. Still needs Om to confirm cuts/adds and supply the named-people
+sources, but the scope discipline is now a real document, not "anything relevant."
 
 ---
 
@@ -152,10 +158,11 @@ collector useful past week two.
 daily." A naive daily scraper simply wouldn't exist between sessions, and its collected state would
 evaporate.
 
-**Fix [design in research-agent.md].** A **scheduled trigger** (cron) wakes a fresh session daily;
-durable state lives in the **git repo** (committed digests + a `seen.md` dedup index), not in
-memory. The repo is the database. Worth stating plainly so nobody assumes a long-running server that
-isn't there.
+**Fix [Om's call: local + manual trigger for now].** The agent runs as a local project Om triggers
+himself; durable state lives in the **git repo** (committed digests + a `seen.md` dedup index), not
+in memory. "Daily" means "each day Om runs it" until there's a reason to automate the schedule — at
+which point the host (a scheduled GitHub Action, a cron box) becomes its own decision. No
+long-running server is assumed. See `research-agent.md` → infrastructure realities.
 
 ---
 
@@ -164,19 +171,41 @@ isn't there.
 **Mechanism.** Automated LinkedIn scraping violates LinkedIn ToS and can get an account restricted.
 Doing it with Om's own account risks the very asset he's building the audience on.
 
-**Fix [design in research-agent.md].** Default to **manual paste** (zero risk, works today). If
-automated, only ever a **third-party API that never uses Om's account/cookies** — and even then it's
-a gray-area cost Om accepts knowingly, not a default.
+**Fix [done — Om's call: manual paste only for now].** Wing B is manual-paste, zero-risk, working
+today through the hook-extractor. Any automated path (a third-party API that never uses Om's
+account/cookies) is explicitly deferred to a later session, and would be a gray-area cost Om accepts
+knowingly, not a default.
 
 ---
 
+## Resolution status (this pass)
+
+Decisions applied in this session, so the doc reflects the live system, not just the original
+critique:
+- **#1 viral-vs-authentic** — resolved: hard "structure not voice" rule + "informed decision, not
+  copy-paste" framing in `research-agent.md`.
+- **#3 confidentiality ground-truth** — resolved at the source: scraper is **public-only**;
+  internal stays Om's manual input. (Reversed last session's "internal too.")
+- **#5 accuracy citation** — resolved: citation-or-flag requirement in `LinkedIn_SKILL.md`.
+- **#6 performance loop** — resolved: Post Performance Log in `voice-calibration-log.md`.
+- **#8 Voice Arc trigger** — resolved: Topic Reps Tally in `voice-calibration-log.md`.
+- **#9 research scope** — resolved: `interest-profile.md` (pending Om's cuts/adds).
+- **#10 infra** — Om's call: local + manual trigger, repo as store.
+- **#11 Wing B risk** — Om's call: manual paste only.
+- **Compatibility-table churn vs. graduation** (was flaw #9 in the first chat pass) — resolved:
+  Wing B is decoupled from the table (new viral examples don't reopen settled verdicts), with Om as
+  the one-way mediator who can still hardwire a verdict change when a viral insight convinces him.
+  See `external-reference-posts.md`.
+- **Still open by choice:** #2/#4/#7 (need real posts / adversarial check at the automation
+  boundary), and the genericization judgment — Om relies on not approving anything he isn't sure of,
+  rather than a formal cooling-off rule.
+
 ## The through-line
 
-Most of these rhyme. The system is well-specified but **completely unexercised** — 0 posts, 0
+Most of these rhyme. The system is well-specified but **still barely exercised** — 0 posts, 0
 research runs, every learning loop still theoretical. The single highest-value move isn't another
 feature; it's **getting real posts through the pipeline** (flaws #2, #7, #8 all resolve the moment
-real data exists). And the single biggest standing risk is the interaction of #3 and #4: automating
-drafting *and* letting internal material in *while* one model grades its own confidentiality
-homework. As long as Om is the human gate (Calibration phase), that's contained. It becomes
-dangerous exactly at the automation boundary — which is the right place to demand the adversarial
-check (#4) and the internal-material quarantine (#3) are actually solid before graduating.
+real data exists). And the single biggest standing risk is now #4 alone: one model grading its own
+homework. With the scraper on public-only and Om as the human gate through Calibration, the
+confidentiality exposure (#3) is contained. #4 becomes the thing to harden at the automation
+boundary — the right place to demand a genuinely adversarial check before graduating.

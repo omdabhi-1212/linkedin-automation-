@@ -102,6 +102,20 @@ several reference posts without needing to change, lock it and note the date her
 
 `Fixed: not yet — still Calibration phase`
 
+**Om is the mediator between the two loops (decoupled, but with crosstalk).** Wing B of the
+research agent keeps surfacing new viral posts to classify — a steady stream, and by design it
+does **not** reopen settled verdicts on its own. A new viral example that happens to use F6
+(comment-gate) doesn't reawaken the F6 debate; it's logged as "went viral via a banned mechanic"
+and moves on. This is the decoupling: the table's stability isn't held hostage to Wing B's
+firehose, so a busy Wing B never blocks graduation to Automated phase.
+
+But the decoupling runs one way only. **Om can always reach in and change a verdict** — if a viral
+insight genuinely convinces him a formula should move (the way F12 and F13 already moved), he makes
+that call and the table changes. Wing B *proposes* through the log; only Om *disposes* into the
+table. So it stays a flexible setup that learns over time, with Om as the single human mediator who
+decides what crosses from "interesting viral pattern" into "hardwired verdict." The stream informs
+him; it never edits the table behind him.
+
 | # | Formula | Verdict | Why |
 |---|---|---|---|
 | F1 | Anaphora (parallel "X can Y" lines) | Marginal | Parallel-structure lists read as an AI tell per `anti-ai-writing-guide.md` Part 2.3. Usable only rarely, for a genuinely earned rhetorical moment — never a default. |

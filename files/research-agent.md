@@ -16,109 +16,78 @@ The agent has two wings that feed each other (see "How the Wings Feed Each Other
 ## What runs it (the honest infrastructure picture)
 
 There is no generic "scraper" wired up, and there doesn't need to be a custom one. The engine is a
-**scheduled Claude agent** — a cron-triggered remote session that runs once a day and uses:
+**Claude agent Om triggers** — for now a session he kicks off himself, later a scheduled one if it's
+worth automating — that uses:
 
 - `WebSearch` + `WebFetch` for public web, news, and open-access journal content (Wing A)
 - The `Consensus` MCP for real peer-reviewed papers with citations (Wing A, Technical-mode fuel)
-- Manual paste, or a paid third-party API (e.g. Apify), for LinkedIn engagement data (Wing B)
+- Manual paste for LinkedIn posts (Wing B) — see reality #3 below
 
-**Two infrastructure realities this design has to respect:**
+**Three infrastructure realities this design has to respect:**
 
-1. **The container is ephemeral.** A daily agent can't keep state in memory between runs. So the
-   digest it produces is **committed to this repo** each day (`research/digest-YYYY-MM-DD.md`),
-   and a small `research/seen.md` index prevents re-surfacing the same item. The repo *is* the
-   durable store.
-2. **Wing B can't be automated through Claude alone.** LinkedIn blocks automated reading of posts
+1. **Runs locally, triggered manually (for now).** Om's current call: keep this a local project he
+   runs by triggering it himself, not a hosted always-on service. "Daily" means "each day Om kicks
+   it off," until there's a reason to automate the schedule — at which point the host (a scheduled
+   GitHub Action, a cron box, etc.) becomes its own decision. Nothing here assumes a long-running
+   server that doesn't exist yet.
+2. **State lives in the repo.** A manually-triggered agent still can't keep state in memory between
+   runs. So each run commits its digest to the repo (`research/digest-YYYY-MM-DD.md`), and a small
+   `research/seen.md` index prevents re-surfacing the same item. The repo *is* the durable store.
+3. **Wing B can't be automated through Claude alone.** LinkedIn blocks automated reading of posts
    and engagement metrics behind auth; `WebFetch` cannot get behind that wall, and scraping it
-   with Om's own account risks his account and violates ToS. So Wing B defaults to **manual
-   paste** (Om drops in posts he notices doing well; the existing `linkedin-hook-extractor` +
-   compatibility gate process them) and only becomes automated if Om funds a third-party API that
-   never touches his own account.
+   with Om's own account risks his account and violates ToS. **Current call: manual paste only.**
+   Om drops in posts he notices doing well; the existing `linkedin-hook-extractor` + compatibility
+   gate process them. A third-party API (never touching Om's own account) stays a later option if
+   he ever wants Wing B automated — that's a separate session's work.
 
 ---
 
 ## The Interest Profile — what the agent needs to know
 
-This is the answer to "what do you need to boil down the areas of interest?" The agent is only as
-good as this profile. Broad instructions like "anything relevant" produce noise; a tight profile
-with explicit *exclusions* is what keeps a daily passive collector from piling up junk and wasting
-tokens. Om fills this in (a starter is proposed; refine it like the voice profile).
+This is the answer to "what do you need to boil down the areas of interest?" The full ontology —
+tiered keywords, entities, source allowlist, exclusions, scoring and decay rules — now lives in its
+own file, **`interest-profile.md`**, seeded from Om's portfolio and goals. That file is the agent's
+scope. This section just names the six inputs it captures and why each matters; edit the profile
+itself in `interest-profile.md`.
 
-### 1. Topic axes (what counts as relevant)
-Ranked, because the agent scores relevance and a daily budget means it can't chase everything.
-
-1. **Genomic wellness / consumer genomics** — the space Geneverse is in. Direct-to-consumer
-   genetic testing, polygenic risk scores for wellness, nutrigenomics, the science and the
-   business model both.
-2. **AI + healthcare / AI + genomics** — predictive diagnostics, digital twins, wearables,
-   AI in diagnostics and drug discovery. (Om's HAI Conclave and Mumbai Tech Week posts live here.)
-3. **The business of genomics/biotech** — funding rounds, partnership models, unit economics,
-   go-to-market, regulation. This is Pillar 2 fuel — the genomics↔business translation.
-4. **Biomanufacturing / bioprocess** — fermentation, scale-up, India's bio-manufacturing push
-   (the BiOZEEN post's territory).
-5. **India biotech / India health-tech ecosystem** — because Om's journey is specifically an
-   India-based one, and that's a differentiator.
-6. **Adjacent-personal** — building in public, career pivots, learning in public, the
-   science-to-entrepreneurship transition. Lower volume, Pillar 3.
-
-### 2. Explicit exclusions (what to drop even if it matches a keyword)
-Just as important as the includes. Starter list — Om extends it:
-- Generic "AI will change everything" think-pieces with no specific finding or mechanism
-- Pure clinical genetics with no wellness or business angle (unless Technical-mode material)
-- Crypto/web3, generic startup hustle content, motivational-quote content
-- Anything paywalled beyond an abstract (not worth the token cost to half-read)
-- US/EU-only regulatory minutiae with no India relevance
-
-### 3. Keywords / search phrases per axis
-The agent searches these. Om seeds them; they get refined as some prove noisy. (Starter set lives
-in `research/keywords.md` once Om approves the axes above.)
-
-### 4. Trusted dense sources (Wing A allowlist)
-The key feature Om asked for: prefer information-dense, trusted sources so tokens aren't wasted on
-blind searching. Starter candidates to confirm/cut:
-- **Journals / preprints:** Nature Genetics, Nature Biotechnology, bioRxiv (via Consensus MCP for
-  anything Technical-mode)
-- **Industry news:** Endpoints News, STAT News, Fierce Biotech, GenomeWeb
-- **India-specific:** Inc42, YourStory (biotech/health verticals), The Ken (health)
-- **People to follow** (named accounts whose posts are dense signal): Om supplies these — the
-  people already in his network whose content he trusts. This is where his real network beats any
-  generic source list.
-
-### 5. Confidentiality tags (see next section)
-Every source is tagged `PUBLIC` or `INTERNAL` at ingestion. This governs how the material can be
-used downstream.
-
-### 6. What Om is actually working on right now
-A short, frequently-updated note ("this month I'm on fermentation scale-up / the data-ownership
-problem / a specific AI build") so the agent can weight fresh material toward what Om can write
-about with real, current authority — the Voice Arc's "earned reps" made concrete.
+1. **Tiered topic ontology (Core / Adjacent / Personal-journey + Business-of-genomics lens).**
+   Ranked keywords and entities, because the agent scores relevance and a daily budget can't chase
+   everything equally. This replaces "anything relevant" with an actual list.
+2. **Explicit exclusions.** As important as the includes — the exclusion list is what keeps a
+   passive collector from piling up junk and burning tokens.
+3. **Keywords / search phrases per tier.** What the agent actually searches.
+4. **Trusted dense sources, mapped to areas.** Prefer information-dense sources so tokens aren't
+   wasted on blind searching, and route each source to the area it best serves. The highest-value
+   entries are the **named people** in Om's network whose posts are dense signal — his real network
+   beats any generic list.
+5. **Om's public identifiers** (his LinkedIn, Sorus/Geneverse public presence). These draw the
+   public-vs-internal line — see Confidentiality below.
+6. **What Om is working on right now.** A short, updated note so the agent weights fresh material
+   toward what Om can write about with real, current authority — the Voice Arc's "earned reps" made
+   concrete.
 
 ---
 
-## Confidentiality handling (Om chose: internal sources allowed)
+## Confidentiality handling (public sources only)
 
-Om opted to let the agent ingest internal Sorus/Geneverse material too, auditing at the end. That
-speeds research, and it also removes several layers of defense — so internal material is
-**quarantined**, not treated like public material:
+**The scraper ingests only public, external sources — never anything internal, never Om's work
+files, never Sorus/Geneverse internal systems.** This is a hard boundary, decided deliberately:
+an automated agent that ingests internal material creates a standing store of confidential text in
+the repo and makes Om's end-audit the *only* line of defense. Keeping the scraper on public sources
+only means it can never be the thing that leaks something.
 
-- **Tagged at the source.** Every ingested item carries `PUBLIC` or `INTERNAL`. Internal =
-  anything from Sorus/Geneverse systems, internal docs, private conversations, or Om's own
-  non-public work notes.
-- **Kept separate in the digest.** `INTERNAL` items live in their own clearly-marked section, never
-  interleaved with public material, so it's never ambiguous what's safe.
-- **Never auto-merged into a draft.** An `INTERNAL` item can *inform* an angle, but any draft that
-  draws on one is flagged and **forced through mandatory human review at the Guardrail Check
-  stage** — the model does not get to auto-clear it, because the model cannot reliably tell what's
-  already public vs. what's internal for Sorus. Only Om can. (This is flaw #3 in
-  `pipeline-critique.md` — the confidentiality gate has no ground truth without Om.)
-- **Om's end-audit is the last line, not the only line.** The quarantine above means a leak has to
-  get past the tag, the separation, the forced review, *and* the audit — instead of the audit
-  alone.
+The division of labor that this sets up:
+- **The scraper's job is the outside world** — news, journals, public LinkedIn, public
+  announcements. If it isn't on a public channel, the scraper doesn't touch it.
+- **Om stays the only source of internal material.** Anything from his actual Sorus/Geneverse work
+  enters the pipeline the way it always has: Om supplies it manually and genericizes it himself,
+  under the Confidentiality Guardrails in `LinkedIn_SKILL.md`. The scraper never reaches for it.
 
-The one honest caveat, recorded so it's a deliberate choice not an oversight: ingesting internal
-material at all creates a standing store of confidential text in the digest history. If that ever
-feels like too much exposure, the fallback is public-sources-only + Om manually supplying internal
-context per-post, which keeps the agent off the confidential path entirely.
+This also resolves the "no ground truth for public-vs-internal" problem (flaw #1 in
+`pipeline-critique.md`) at the source: the scraper can't misjudge what's internal, because it's
+structurally barred from internal material in the first place. The public-identifier list in
+`interest-profile.md` is how it recognizes Om's own public footprint and stays on the right side of
+that line.
 
 ---
 
@@ -159,10 +128,16 @@ worked, so Om can build an organic version.
   in `external-reference-posts.md`. Never a fill-in-the-blank template.
 - The underlying *topic* that resonated — which feeds back into Wing A (see below).
 
-**The standing risk, named:** Wing B pulls toward the mean of LinkedIn content — the precise thing
-the voice profile fights. So the hard rule (also flaw #1 in the critique): **Wing B may shape a
-post's structure, never its voice or content.** Virality insight tells you a topic is hot or a
-hook shape works; it never tells you what Om thinks or how Om sounds.
+**Informed decision, not blind copy-paste.** The point of Wing B is not to make a post go viral by
+reusing content that already did. It's to *understand* what kind of content is resonating and how
+it's structured, pull whatever genuine insight is there, and let that inform Om's own writing while
+keeping the whole thing organic. It's a more-informed authoring decision, never a paste. That's why
+the output is always the prose principle through the gate, never the post or a template.
+
+**The standing risk, named:** even so, Wing B pulls toward the mean of LinkedIn content — the
+precise thing the voice profile fights. So the hard rule (also flaw #1 in the critique): **Wing B
+may shape a post's structure, never its voice or content.** Virality insight tells you a topic is
+hot or a hook shape works; it never tells you what Om thinks or how Om sounds.
 
 ---
 
@@ -188,8 +163,7 @@ that is both true and likely to build audience.
 ## Output: the daily digest
 
 Each run commits `research/digest-YYYY-MM-DD.md` with:
-- **Public substance (Wing A):** scored, deduped items with source/date/why-it-matters/pillar.
-- **Internal (quarantined):** clearly separate, tagged, forced-review-on-use.
+- **Substance (Wing A):** scored, deduped public items with source/date/why-it-matters/pillar.
 - **Virality signals (Wing B):** technique + compatibility verdict + the topic it surfaced.
 - **Cross-wing links:** any A↔B loops fired this run.
 - **Carry-over:** un-aged items still live from prior digests.
@@ -202,10 +176,11 @@ digest is a convenience, not a bypass.
 
 ## Build status
 
-- **Designed, not yet built.** This file is the spec.
-- **Wing A** is buildable now on the scheduled-agent + WebSearch/WebFetch/Consensus path, once Om
-  confirms the Interest Profile (topic axes, exclusions, sources, keywords).
-- **Wing B** works today in manual-paste mode through the existing hook-extractor; automation waits
-  on an API decision.
-- **Blocked on Om:** the Interest Profile above. The agent can't be pointed at anything until the
-  axes, exclusions, and trusted sources are confirmed.
+- **Designed, not yet built.** This file is the spec; the ontology is in `interest-profile.md`.
+- **Wing A** is buildable now on the manual-trigger agent + WebSearch/WebFetch/Consensus path, once
+  Om confirms `interest-profile.md` (keywords to cut/add, sources, named people, the three
+  public-identifier URLs).
+- **Wing B** is manual-paste only for now, through the existing `linkedin-hook-extractor`. Its
+  automation (a third-party API) is explicitly deferred to a later session.
+- **Blocked on Om:** `interest-profile.md`. The agent can't be pointed at anything until the
+  keywords, sources, and public identifiers are confirmed.
