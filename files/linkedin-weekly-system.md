@@ -41,8 +41,17 @@ back-and-forth each one needs.
 
 Gather raw material for the week's post: something that happened at Geneverse/Sorus worth
 generalizing (Pillar 1), a genomics or business concept worth translating (Pillar 2), or an
-event/experience worth reflecting on (Pillar 3). Pull from whatever Om supplies that week —
-a rough note, a conversation, something he mentions in passing — never invent source material.
+event/experience worth reflecting on (Pillar 3).
+
+Two sources feed this stage:
+- **What Om supplies that week** — a rough note, a conversation, something he mentions in passing.
+  Never invent source material.
+- **The research agent's daily digests** (`research-agent.md`, `research/digest-*.md`) — a passive
+  two-wing collector (trusted-source substance + LinkedIn virality signals) that builds a pool of
+  current, relevant material so this stage isn't starting cold. The digest is a convenience, not a
+  bypass: anything drawn from it passes the same guardrails as any other input, and anything tagged
+  `INTERNAL` in the digest is forced through mandatory human review at Guardrail Check (see
+  `research-agent.md` → Confidentiality handling).
 
 **Output Om reviews:** raw notes and a proposed content pillar, before any drafting starts.
 
@@ -216,3 +225,5 @@ own.
 | `voice-calibration-log.md` | Every post drafted during Calibration phase, with feedback and what it changed in the skill file. The record that decides when to graduate to Automated phase. |
 | `external-reference-posts.md` | External posts Om likes, with the technique extracted and checked against his voice before it touches the skill file. Holds the Hook Formula Compatibility Table. |
 | `linkedin-hook-extractor/` | Adapted downloaded tool that classifies an external post's structure into one of 16 named formulas. Feeds `external-reference-posts.md` only — gated by the compatibility table, never produces output used directly in a draft. |
+| `research-agent.md` | Spec for the two-wing daily research agent (trusted-source substance + LinkedIn virality signals) that feeds the Research stage. Includes the Interest Profile Om must fill in, the confidentiality quarantine for internal material, and the infra reality (scheduled agent, repo-as-store). |
+| `pipeline-critique.md` | Adversarial flaw analysis of the whole system with proposed fixes, severity-ranked. Living document — revisit as flaws get resolved or new ones surface. |
